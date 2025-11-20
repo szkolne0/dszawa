@@ -1,0 +1,29 @@
+<html>  
+    <head>  
+    <title> Przykład obliczenia V  i  Pc walca </title> 
+    </head>  
+<body>  
+        <script language="JavaScript"> 
+        var liczba1=prompt("liczba1=","");
+        var liczba2=prompt("liczba2=","");
+        var x1_pac=parseFloat(liczba1);
+        var x2_pac=parseFloat(liczba2);
+		
+				document.write("X1="+x1_pac+"&nbsp&nbsp&nbsp&nbsp&nbsp"+"X2="+x2_pac+"<br>");
+				
+        var y1_pac=3*Math.pow(x1_pac,8/10);
+		
+				document.write("y1="+y1_pac.toFixed(2)+"<br>");
+				
+			rad_x1_pac=(x1_pac*Math.PI)/180;
+        var y2_pac=2*Math.cos(rad_x1_pac)+3*Math.sin(rad_x1_pac);
+		
+				document.write("y2="+y2_pac.toFixed(2)+"<br>");
+				
+		var akuku=Math.pow(x1_pac,5)+2*Math.pow(x2_pac,4);
+		var y3_pac=Math.pow(akuku,1/3)*Math.abs(x1_pac-x2_pac);
+		
+				document.write("y3="+y3_pac.toFixed(2)+"<br>");
+        </script> 
+</body>  
+</html> 

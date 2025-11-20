@@ -1,0 +1,70 @@
+<html> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="styl.css"> 
+ </head> 
+<body> 
+ <script type="text/javascript"> 
+  function AB_pac() 
+  {
+ var x1 = parseFloat(document.getElementById('x1').value); 
+ var x2 = parseFloat(document.getElementById('x2').value); 
+ var y1 = parseFloat(document.getElementById('y1').value); 
+ var y2 = parseFloat(document.getElementById('y2').value); 
+ var a = Math.pow(x1,2);
+ var b = Math.pow(y1,2);
+ var c = a+b;
+ var a1 = Math.pow(x2,2);
+ var b1 = Math.pow(y2,2);
+ var c1 = a1+b1;
+ var d = c+c1;
+ var e = Math.sqrt(d);
+  document.getElementById("nazwa").innerHTML ="AB= "+e+" cm";  
+  }
+  function BC_pac() 
+  {
+ var x2 = parseFloat(document.getElementById('x2').value); 
+ var x3 = parseFloat(document.getElementById('x3').value); 
+ var y2 = parseFloat(document.getElementById('y2').value); 
+ var y3 = parseFloat(document.getElementById('y3').value); 
+ var a = Math.pow(x2,2);
+ var b = Math.pow(y2,2);
+ var c = a+b;
+ var a1 = Math.pow(x3,2);
+ var b1 = Math.pow(y3,2);
+ var c1 = a1+b1;
+ var d = c+c1;
+ var e = Math.sqrt(d);
+   document.getElementById("nazwa").innerHTML ="BC= "+e+" cm";  
+  }
+  function AC_pac() 
+  {
+ var x1 = parseFloat(document.getElementById('x1').value); 
+ var x3 = parseFloat(document.getElementById('x3').value); 
+ var y1 = parseFloat(document.getElementById('y1').value); 
+ var y3 = parseFloat(document.getElementById('y3').value); 
+ var a = Math.pow(x1,2);
+ var b = Math.pow(y1,2);
+ var c = a+b;
+ var a1 = Math.pow(x3,2);
+ var b1 = Math.pow(y3,2);
+ var c1 = a1+b1;
+ var d = c+c1;
+ var e = Math.sqrt(d);
+   document.getElementById("nazwa").innerHTML ="AC= "+e+" cm";  
+  }
+ </script> 
+  <h1>Wszystko o  </h1><br><br> 
+  Podaj wartość x1: <input type="text" id="x1" value="podaj wartość x1"> cm<br><br><br>  
+  Podaj wartość y1: <input type="text" id="y1" value="podaj wartość y1"> cm<br><br><br>  
+  Podaj wartość x2: <input type="text" id="x2" value="podaj wartość x2"> cm<br><br><br>  
+  Podaj wartość y2: <input type="text" id="y2" value="podaj wartość y2"> cm<br><br><br> 
+  Podaj wartość x3: <input type="text" id="x3" value="podaj wartość x3"> cm<br><br><br> 
+  Podaj wartość y3: <input type="text" id="y3" value="podaj wartość y3"> cm<br><br><br>  
+
+  <input type="button" name="pole" value="Oblicz AB" Onclick="AB_pac()"><br><br> 
+  <input type="button" name="pole" value="Oblicz BC" Onclick="BC_pac()"><br><br> 
+  <input type="button" name="pole" value="Oblicz AC" Onclick="AC_pac()"><br><br> 
+  <div  style="color:red;font-size:50px;"id="nazwa"></div> 
+</body> 
+</html>
