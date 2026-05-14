@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+ <title>Zadanie JavaScript</title> 
+ <meta charset="utf-8"> 
+ <style> 
+  h1 { text-transform: uppercase; } 
+  
+ </style> 
+</head> 
+<body> 
+ 
+ <h1>Proste działania</h1> 
+ <label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a"> 
+ <br><br> 
+ <label for="b">Podaj drugą liczbę:</label> <input type="number" id="b"> 
+ <br><br> 
+ <input type="button" value="DODAWANIE" onclick="suma_pac()"> 
+ <input type="button" value="ODEJMOWANIE" onclick="roznica_pac()"> 
+ <input type="button" value="MNOŻENIE" onclick="iloczyn_pac()"> 
+ <input type="button" value="DZIELENIE" onclick="iloraz_pac()"> 
+ <input type="button" value="Teoria Paciorek" onclick="teoria_pac()">
+ <div id="wynik" style="margin-top:20px;"></div> 
+ <script> 
+  function suma_pac() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+   document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var suma = a + b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma; 
+   } 
+   //alert(a); 
+   //console.log(a); 
+  } 
+  function roznica_pac() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var roznica = a - b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica; 
+   } 
+  }   
+ 77 
+  function iloczyn_pac() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    var iloczyn = a * b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn; 
+   } 
+  }   
+ 
+  function iloraz_pac() 
+  { 
+   var a = document.getElementById("a").value; 
+   var b = document.getElementById("b").value; 
+   if (a == "" || b == "") 
+   { 
+  document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby."; 
+   } else 
+   { 
+    a = parseFloat(a); 
+    b = parseFloat(b); 
+    if (b == 0) 
+    { 
+  document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero."; 
+    } 
+    else 
+    {         
+     var iloraz = a / b; 
+  document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz; 
+    } 
+   } 
+  } 
+  function teoria_pac() 
+{ 
+    document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>"); 
+    document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>label for=</font>"+"<font color=red size=4>&quot;</font>"); 
+    document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>"); 
+    document.write("<font color=red size=4>Podaj pierwszą liczbę:</font>"); 
+    document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>/label</font>"+"<font color=red size=4>&gt;</font>"); 
+    document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>input type=</font>"+"<font color=red size=4>&quot;</font>"); 
+    document.write("<font color=red size=4>number</font>"+"<font color=red size=4>&quot;</font>"); 
+    document.write("<font color=red size=4> id=</font>"+"<font color=red size=4>&quot;</font>"); 
+    document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>"+"<br>"); 
+    document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>"); 
+    document.write("<font color=red size=4><label for="+a+">Podaj pierwszą liczbę:</label> <input type="+number+" id="+a+"> Ta linijka kodu HTML tworzy interfejs użytkownika składający się z etykiety (label)[opis wprowadzania danych, czyli tekst przed polem input]  i pola do wprowadzania danych (input) w języku JavaScript (oraz HTML).  label   i   input współpracują między sobą. Oto szczegółowy opis działania każdego elementu:  <label for="+a+">Podaj pierwszą liczbę:</label>: Jest to element etykiety (<label>), który jest używany do identyfikacji pola formularza. Atrybut for w etykiecie odnosi się do identyfikatora (id) elementu formularza, do którego etykieta jest przypisana. W tym przypadku, for="+a+" oznacza, że etykieta jest przypisana do pola formularza z identyfikatorem id="+a+". Tekst Podaj pierwszą liczbę: jest wyświetlany jako opis pola formularza, pomagając użytkownikowi zrozumieć, jakie informacje powinien wprowadzić.  <input type="+number+" id="+a+">: Jest to element formularza (<input>), który pozwala użytkownikowi na wprowadzenie danych. Atrybut type="+number+" określa, że pole przyjmie tylko wartości liczbowe, co oznacza, że użytkownik może wprowadzić tylko liczby (całkowite oraz zmiennoprzecinkowe, w zależności od przeglądarki i ustawień regionalnych). Atrybut id="+a+" nadaje temu polu formularza unikalny identyfikator, który może być używany w JavaScript i CSS do manipulacji lub stylizacji tego elementu. W praktyce, połączenie etykiety z polem formularza poprzez for i id ułatwia użytkownikom korzystanie z formularzy, szczególnie w przypadku osób korzystających z czytników ekranu, ponieważ po kliknięciu na etykietę, fokus zostaje automatycznie przesunięty do przypisanego pola formularza, co ułatwia wprowadzanie danych.</font>"+"<br>");
+}
+ </script> 
+</body> 
+</html>
+
+<!--  Paciorek Z41_JS  --> 
