@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head>  
+   <meta charset="utf-8"> 
+    <title>  Przykład użycia pętli </title> 
+  <script language="JavaScript"> 
+do {
+    silnia_koniec=parseFloat(prompt("z czego silnia",""));
+}
+while(silnia_koniec<0);
+if(silnia_koniec==0){silnia_pac=1;}
+    else   
+    {var silnia_pac=1;
+        for(i=1;i<silnia_koniec+1;i++)
+        silnia_pac=silnia_pac*i;
+    }
+    document.write(silnia_koniec+"!="+silnia_pac);
+</script> 
+  </head>  
+<body>  
+</body>  
+</html> 

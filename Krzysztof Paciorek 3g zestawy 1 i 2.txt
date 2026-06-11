@@ -1,0 +1,19 @@
+Krzysztof Paciorek 3g
+
+1.1 Select * from pracownicy;
+1.2 delete from pracownicy where id_pracownika = 12;
+1.3 alter table pracownicy alter column nazwisko type char(49);
+1.4 alter table pracownicy rename column id to id_pracownika;
+1.5 alter table pracownicy add drugie_imie varchar(15);
+1.6 update pracownicy set drugie_imie = 'Mario';
+1.7 update pracownicy set drugie_imie = 'Piotr' where imie = 'Adam';
+1.8 alter table pracownicy rename to klienci;
+
+2.1 alter table pracownicy add pseudonium varchar(34);
+2.2 alter table pracownicy alter column pseudonim type char(50);
+2.3 update pracownicy set pseudonim = 'Laser';
+2.4 update pracownicy set pseudonim = 'Kros' where imie = 'Krzysztof';
+2.5 alter table pracownicy rename column pseudonim to nik;
+2.6 delete from pracownicy where id = 1 or id = 3;
+2.7 alter table pracownicy rename to zatrudnieni;
+2.8 alter table osoby drop column nik;

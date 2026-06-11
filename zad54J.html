@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head>  
+   <meta charset="utf-8"> 
+    <title>  Przykład użycia pętli </title> 
+  <script language="JavaScript"> 
+  var a_pac=6;
+  var b_pac=22;
+   for ( var i_pac=0; i_pac<=b_pac; i_pac++) 
+    { 
+	document.write("*");
+	}
+    document.write("<br>");
+	for(var j_pac=0 ; j_pac<=a_pac-2 ; j_pac++)
+	{
+	var spacje_pac = new Array(b_pac).join("&nbsp;&nbsp;");
+	document.write("*"+spacje_pac+"*<br>");
+	}
+	   for ( var i_pac=0; i_pac<=b_pac; i_pac++) 
+    { 
+	document.write("*");
+	}
+  </script> 
+  </head>  
+<body>  
+</body>  
+</html> 
